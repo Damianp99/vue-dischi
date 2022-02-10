@@ -1,11 +1,11 @@
 <template>
   <main>
     <div class="container">
-      <div class="row py-5">
-        <dinpv
+      <div class="row py-5 offset-1">
+        <div
           v-for="(card, index) in cards"
           :key="index"
-          class="col-2 my-1 justify-content-center text-center d-flex px-5"
+          class="col-2 justify-content-center text-center d-flex m-2"
         >
           <CardSong
             :poster="card.poster"

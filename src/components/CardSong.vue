@@ -5,7 +5,7 @@
         <img :src="poster" alt="song" />
       </div>
       <div class="card-description">
-        <span class="text-white">{{ title }}</span>
+        <span class="text-white fw-bold">{{ title }}</span>
         <div class="text-muted h5">
           <span>{{ author }}</span>
         </div>
