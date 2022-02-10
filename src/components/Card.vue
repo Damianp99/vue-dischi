@@ -1,17 +1,18 @@
 <template>
-  <main></main>
+  <div></div>
 </template>
 
 <script>
 export default {
-  name: "Main",
+  name: "Card",
+  data() {
+    return {};
+  },
+  methods: {},
+  mounted: {},
 };
 </script>
 
 <style lang="scss" scoped>
 @import "~bootstrap/scss/bootstrap.scss";
-main {
-  height: calc(100vh - 80px);
-  background-color: #1e2d3b;
-}
 </style>

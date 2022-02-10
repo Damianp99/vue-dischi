@@ -1,13 +1,22 @@
 <template>
-  <div></div>
+  <div>
+    <Header />
+    <Main />
+  </div>
 </template>
 
 <script>
+import Main from "./components/Main.vue";
+import Header from "./components/Header.vue";
 export default {
   name: "App",
-  components: {},
+  components: {
+    Header,
+    Main,
+  },
 };
 </script>
 
 <style lang="scss">
+@import "~bootstrap/scss/bootstrap.scss";
 </style>
