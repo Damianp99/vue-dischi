@@ -1,10 +1,20 @@
 <template>
-  <main></main>
+  <main>
+    <div class="container">
+      <div class="row py-5">
+        <CardSong />
+      </div>
+    </div>
+  </main>
 </template>
 
 <script>
+import CardSong from "./CardSong.vue";
 export default {
   name: "Main",
+  components: {
+    CardSong,
+  },
 };
 </script>
 
