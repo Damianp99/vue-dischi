@@ -5,7 +5,13 @@
         <div
           v-for="(card, index) in cards"
           :key="index"
-          class="col-2 justify-content-center text-center d-flex m-2"
+          class="
+            col-sm-4 col-md-3 col-lg-2
+            justify-content-center
+            text-center
+            d-flex
+            m-2
+          "
         >
           <CardSong
             :poster="card.poster"

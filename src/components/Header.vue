@@ -1,12 +1,17 @@
 <template>
-  <header class="d-flex align-items-center">
+  <header class="d-flex align-items-center justify-content-between px-5">
     <img src="../assets/Logo-della-Spotify.png" alt="Logo-Spotify" />
+    <div><SelectGenre /></div>
   </header>
 </template>
 
 <script>
+import SelectGenre from "./SelectGenre.vue";
 export default {
   name: "Header",
+  components: {
+    SelectGenre,
+  },
 };
 </script>
 
