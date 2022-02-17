@@ -34,10 +34,22 @@ export default {
   components: {
     CardSong,
   },
+  props: ["selectedGenre"],
   data() {
     return {
       cards: [],
     };
+  },
+  computed: {
+    filteredCard() {
+      return this.cards.filter((card) => {
+        if (card.genre === this.selectedGenre) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    },
   },
   methods: {
     // getSongs() {
@@ -53,6 +65,13 @@ export default {
       .get("https://flynn.boolean.careers/exercises/api/array/music")
       .then((res) => {
         this.cards = res.data.response;
+
+        const genres = [];
+        this.cards.forEach((card) => {
+          const { genre } = card;
+          if (!genres.includes(genre)) genres.push(genre);
+        });
+        this.$emit("genres", genres);
       });
   },
 };

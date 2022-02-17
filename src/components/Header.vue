@@ -1,7 +1,9 @@
 <template>
   <header class="d-flex align-items-center justify-content-between px-5">
     <img src="../assets/Logo-della-Spotify.png" alt="Logo-Spotify" />
-    <div><SelectGenre /></div>
+    <!-- <h1 class="text-white">La mia libreria Spotify</h1> -->
+    <div><SelectGenre :genres="genres" @change-genre="selectedGenre" /></div>
+    <!-- :genre="card.genre" da aggiungere in selectgenre quando passo le info con emit() -->
   </header>
 </template>
 
@@ -9,8 +11,17 @@
 import SelectGenre from "./SelectGenre.vue";
 export default {
   name: "Header",
+  props: ["genres"],
+  data() {
+    return {};
+  },
   components: {
     SelectGenre,
+  },
+  methods: {
+    selectedGenre(selectedGenre) {
+      this.$emit("selected-genre", selectedGenre);
+    },
   },
 };
 </script>
